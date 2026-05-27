@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handcrafted Haven</title>
-    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    @theme {
+        --color-primary: #FF6B6B;
+        --color-secondary: #FFD166;
+        --color-background: #F4F1DE;
+        --color-accent: #4EA8DE;
+        --color-darkcontrast: #1A1A1A;
+    }
+    </style>
 </head>
-<body>
-    <header>
+<body class="bg-background text-darkcontrast flex-col h-dvh">
+    <header class="bg-primary">
         <h2>Handcrafted Haven</h2>
         <nav>
             <ul>
@@ -15,8 +24,8 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div>
+    <main class="flex-col flex-grow">
+        <div class="bg-secondary">
             This is our card
         </div>
     </main>
