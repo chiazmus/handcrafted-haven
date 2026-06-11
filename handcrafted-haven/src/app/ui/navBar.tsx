@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import HavenLogo from '@/app/ui/haven-logo';
+import Link from 'next/link';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,17 +16,17 @@ return (
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Shop</a>
-            <a href="#" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Artisans</a>
-            <a href="#" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Our Story</a>
+            <Link href="/shop" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Shop</Link>
+            <Link href="/artisans" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Artisans</Link>
+            <Link href="#" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Our Story</Link>
             
             {/* Join button */}
-            <a 
+            <Link 
               href="#" 
               className="bg-[var(--color-primary)] text-[var(--color-darkcontrast)] font-black uppercase px-4 py-2 border-2 border-[var(--color-darkcontrast)] shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] transition-all"
             >
               Start Selling
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -51,16 +52,16 @@ return (
       {/* Mobile Menu dropdown */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden border-t-2 border-[var(--color-darkcontrast)] bg-[var(--color-background)]`} id="mobile-menu">
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-          <a href="#" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Shop</a>
-          <a href="#" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Artisans</a>
-          <a href="#" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Our Story</a>
+          <Link href="/shop" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Shop</Link>
+          <Link href="/artisans" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Artisans</Link>
+          <Link href="#" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Our Story</Link>
           <div className="pt-2 px-3">
-            <a 
+            <Link
               href="#" 
               className="block text-center bg-[var(--color-primary)] text-[var(--color-darkcontrast)] font-black uppercase py-2 border-2 border-[var(--color-darkcontrast)] shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]"
             >
               Start Selling
-            </a>
+            </Link>
           </div>
         </div>
       </div>
