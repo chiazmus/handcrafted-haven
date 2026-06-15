@@ -1,14 +1,23 @@
 import NavBar from "@/app/ui/navBar";
+import SearchBar from "@/app/ui/searchBar";
 
+export default async function Shop({
+  searchParams,
+}: {
+  searchParams: Promise<{ search?: string }>;
+}) {
+  const resolvedParams = await searchParams;
+  const query = resolvedParams.search || '';
 
-export default function Shop() {
   return (
     <div>
       <header>
-        <NavBar/>
+        <NavBar />
       </header>
-      <main>
-        <h2>Products</h2>
+      <main className="m-4">
+        <SearchBar />
+        <h2>Search Results for: &quot;{query}&quot;</h2>
+        {/* Display filtered products here later */}
       </main>
     </div>
   );
