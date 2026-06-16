@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-export default function AddReview() {
+interface AddReviewProps {
+  productId?: string;
+}
+
+export default function AddReview({ productId }: AddReviewProps) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [rating, setRating] = useState('');

@@ -31,7 +31,7 @@ export default function Products({ searchFilter, productList } : ProductProps) {
           title={`${product.title} | ${product.rating}/5`}
           body={product.description}
           image={product.image}
-          review={'#'}
+          review={`shop/review?id=${product.id}`}
         />
       ))}
       {(productList.length == 0) && (<h3 className="text-center text-2xl">No products are available!</h3>)}
