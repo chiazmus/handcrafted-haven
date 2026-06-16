@@ -22,7 +22,7 @@ return (
             
             {/* Join button */}
             <Link 
-              href="#" 
+              href="/profile/create" 
               className="bg-[var(--color-primary)] text-[var(--color-darkcontrast)] font-black uppercase px-4 py-2 border-2 border-[var(--color-darkcontrast)] shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] transition-all"
             >
               Start Selling
@@ -57,7 +57,7 @@ return (
           <Link href="/ourStory" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Our Story</Link>
           <div className="pt-2 px-3">
             <Link
-              href="#" 
+              href="/profile/create" 
               className="block text-center bg-[var(--color-primary)] text-[var(--color-darkcontrast)] font-black uppercase py-2 border-2 border-[var(--color-darkcontrast)] shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]"
             >
               Start Selling

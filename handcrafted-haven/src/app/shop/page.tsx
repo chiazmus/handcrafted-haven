@@ -1,5 +1,6 @@
 import NavBar from "@/app/ui/navBar";
 import SearchBar from "@/app/ui/searchBar";
+import Products from "@/app/shop/products";
 
 export default async function Shop({
   searchParams,
@@ -16,8 +17,9 @@ export default async function Shop({
       </header>
       <main className="m-4">
         <SearchBar />
-        <h2>Search Results for: &quot;{query}&quot;</h2>
+        {(query) && (<h2>Search Results for: &quot;{query}&quot;</h2>)}
         {/* Display filtered products here later */}
+        <Products productList={[]}/>
       </main>
     </div>
   );

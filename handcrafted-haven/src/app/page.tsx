@@ -27,14 +27,20 @@ export default function Home() {
           <Card
             title="Beautiful Handmade Jewelry"
             body="Discover unique pieces created by local artisans"
+            image="/images/jewelry.webp"
+            href="/shop?search=jewelry"
           />
           <Card
             title="Handcrafted Ceramics"
             body="Unique pottery and ceramic creations"
+            image="/images/ceramics.webp"
+            href="/shop?search=ceramics"
           />
           <Card
             title="Artisan Textiles"
             body="Beautiful handwoven fabrics and tapestries"
+            image="/images/textiles.webp"
+            href="/shop?search=textiles"
           />
         </div>
       </main>

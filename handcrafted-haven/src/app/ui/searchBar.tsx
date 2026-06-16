@@ -11,7 +11,7 @@ export default function SearchBar({ placeholder = "Search for products..." }: Se
   const [query, setQuery] = useState('');
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     if (query.trim()) {
       router.push(`/shop?search=${encodeURIComponent(query)}`);

@@ -9,7 +9,7 @@ export default function OurStory(){
       <header>
         <NavBar/>
       </header>
-      <main className="m-4">
+      <main className="m-4 flex-column">
         <h2 className="text-3xl font-bold m-2">About Us</h2>
         {/* Hero Bar */}
         <div className="border-4 border-darkcontrast mb-4 overflow-hidden">

@@ -15,14 +15,17 @@ export default function Artisans(){
           <Card
             title="John Cena"
             body="Wrestling and Acting Memorabilia"
+            artistProducts="johncena"
           />
           <Card
             title="David Bowie"
             body="Songs and Face Paint"
+            artistProducts="davidbowie"
           />
           <Card
             title="Ludvig Ban Beethoven"
             body="Compositions, Instruments, and Deafness"
+            artistProducts="ludvigbanbeethoven"
           />
         </div>
       </main>
