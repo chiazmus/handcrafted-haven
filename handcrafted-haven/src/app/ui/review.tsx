@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useRouter } from 'next/navigation'
 
 interface AddReviewProps {
   productId?: string;
@@ -10,11 +11,37 @@ export default function AddReview({ productId }: AddReviewProps) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [rating, setRating] = useState('');
+  const router = useRouter();
 
-  const handleSubmit = (e: React.SubmitEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Save to database later
-    console.log({ title, body, rating });
+    if (!productId) return;
+
+    const ratingNum = Number(rating);
+
+    const reviewResponse = await fetch("/api/reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating: ratingNum, title, body, productId }),
+    });
+
+    if (!reviewResponse.ok) {
+      console.error("Failed to save review");
+      return;
+    }
+
+    const updateResponse = await fetch("/api/products", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ productId }),
+    });
+
+    if (!updateResponse.ok) {
+      console.error("Failed to update product rating");
+      return;
+    }
+
+    router.replace("/shop")
   };
 
   return (

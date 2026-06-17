@@ -6,8 +6,9 @@ interface ReviewPageProps {
   };
 }
 
-export default function ReviewPage({ searchParams }: ReviewPageProps) {
-  const productId = searchParams?.id;
+export default async function ReviewPage({ searchParams }: ReviewPageProps) {
+  const searchParam = await searchParams;
+  const productId = await searchParam?.id;
 
   return (
     <div className="mx-auto max-w-4xl p-6">

@@ -21,7 +21,11 @@ export default function Card({ image, imageAlt, title, body, href, review, artis
             )}
             <h3 className="text-2xl font-bold text-darkcontrast mb-3 border-b-4 border-primary pb-2">{title}</h3>
             <p className="text-darkcontrast text-base leading-relaxed block">{body}</p>
-            {(review) && (<Link href={review} className="block text-center border-4 border-darkcontrast bg-primary text-white m-4 px-1 py-1 font-bold hover:shadow-[4px_4px_0px_0px_rgba(26,26,26,0.3)] transition-shadow">Leave Review</Link>)}
+            {(review) && (
+                <div className="flex flex-row justify-evenly">
+                <Link href={`shop/review?id=${review}`} className="block text-center border-4 border-darkcontrast bg-primary text-white m-4 px-1 py-1 font-bold hover:shadow-[4px_4px_0px_0px_rgba(26,26,26,0.3)] transition-shadow">Leave Review</Link>
+                <Link href={`shop/productReviews?id=${review}`} className="block text-center border-4 border-darkcontrast bg-primary text-white m-4 px-1 py-1 font-bold hover:shadow-[4px_4px_0px_0px_rgba(26,26,26,0.3)] transition-shadow">View Reviews</Link>
+                </div>)}
             {(artistProducts) && (<Link href={`/shop?search=${artistProducts}`} className="block text-center border-4 border-darkcontrast bg-primary text-white m-4 px-1 py-1 font-bold hover:shadow-[4px_4px_0px_0px_rgba(26,26,26,0.3)] transition-shadow">See Creations</Link>)}
         </div>
     );
