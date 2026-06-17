@@ -18,6 +18,7 @@ return (
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/shop" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Shop</Link>
             <Link href="/artisans" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Artisans</Link>
+            <Link href="/profile" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Profile</Link>
             <Link href="/ourStory" className="font-bold text-[var(--color-darkcontrast)] hover:text-[var(--color-primary)] transition-colors">Our Story</Link>
             
             {/* Join button */}
@@ -54,6 +55,7 @@ return (
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
           <Link href="/shop" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Shop</Link>
           <Link href="/artisans" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Artisans</Link>
+          <Link href="/profile" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Profile</Link>
           <Link href="/ourStory" className="block px-3 py-2 text-base font-bold text-[var(--color-darkcontrast)] hover:bg-[var(--color-secondary)]">Our Story</Link>
           <div className="pt-2 px-3">
             <Link
